@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Content />
     <Footer />
   </div>
 </template>
@@ -8,11 +9,13 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer'
+import Content from './components/content/Content'
 
 export default {
   name: 'App',
   components: {
     Header,
+    Content,
     Footer
   }
 }
@@ -25,6 +28,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 *{padding: 0;margin: 0;border: 0;}
 *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}

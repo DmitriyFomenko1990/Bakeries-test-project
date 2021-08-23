@@ -62,6 +62,7 @@ export default {
 <style scoped lang="scss">
   .footer {
     &__wrapper{
+      flex-shrink: 0;
       background-color: #f3f3f3;
       padding: 20px 100px;
     }
