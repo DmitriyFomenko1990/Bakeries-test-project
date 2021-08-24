@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { fetchBakeries } from '../api/api'
+import { fetchBakeries, fetchLocations } from '../api/api'
 
 Vue.use(Vuex)
 
@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     isError: '',
     isEnglish: true,
-    bakeries: []
+    bakeries: [],
+    locations: []
   },
   mutations: {
     setError (state, error) {
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     setBakeries (state, bakeries) {
       state.bakeries = bakeries
+    },
+    setLocations (state, locations) {
+      state.locations = locations
     }
   },
   actions: {
@@ -26,11 +30,18 @@ export default new Vuex.Store({
       return fetchBakeries()
         .then(response => {
           context.commit('setBakeries', response)
-          console.log(response)
         })
         .catch(error => {
           context.commit('setError', error)
-          console.log(error)
+        })
+    },
+    fetchLocations (context) {
+      return fetchLocations()
+        .then(response => {
+          context.commit('setLocations', response)
+        })
+        .catch(error => {
+          context.commit('setError', error)
         })
     }
   },
@@ -46,8 +57,21 @@ export default new Vuex.Store({
           return [...prev]
         }
       }, [])
+    },
+    getLocationsNames: state => {
+      const namesArray = state.locations.map(location => location.name)
+      const locationsArrays = []
+      const size = namesArray.length / 5
+      let remainder = namesArray.length % 5
+      while (namesArray.length > 0) {
+        if (remainder > 0) {
+          locationsArrays.push(namesArray.splice(0, size + 1))
+          remainder--
+        } else {
+          locationsArrays.push(namesArray.splice(0, size))
+        }
+      }
+      return locationsArrays
     }
-  },
-  modules: {
   }
 })
