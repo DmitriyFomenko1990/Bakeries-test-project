@@ -1,15 +1,17 @@
 <template>
   <div class="content__wrapper">
     <Bakeries />
+    <Information />
   </div>
 </template>
 
 <script>
-
 import Bakeries from './bakeries/Bakeries'
+import Information from './information/Information'
 export default {
   name: 'Content',
   components: {
+    Information,
     Bakeries
   },
   props: {
