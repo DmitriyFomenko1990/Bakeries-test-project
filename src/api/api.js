@@ -1,9 +1,9 @@
-import { bakeries, cities, schedule } from './routes'
+import { bakeries, locations, schedule } from './routes'
 
 export const fetchBakeries = () => fetch(bakeries)
   .then(response => response.json())
 
-export const fetchCities = () => fetch(cities)
+export const fetchLocations = () => fetch(locations)
   .then(response => response.json())
 
 export const fetchSchedule = () => fetch(schedule)
