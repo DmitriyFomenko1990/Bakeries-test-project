@@ -13,9 +13,11 @@
         </div>
         <h4 class="footer__settings-title">Language</h4>
         <div class="footer__languages">
-          <button>NO</button>
-          <p>|</p>
-          <button>EN</button>
+          <button class="footer__languageBtn" v-bind:class="{footer__languageBtn_active: !isEnglish}"
+              v-on:click="setLanguage(false)">NO</button>
+          <span class="footer__separator">|</span>
+          <button class="footer__languageBtn" v-bind:class="{footer__languageBtn_active: isEnglish}"
+              v-on:click="setLanguage(true)">EN</button>
         </div>
       </div>
       <div class="footer__nav">
@@ -54,7 +56,16 @@
 <script>
 export default {
   name: 'Footer',
-  props: {
+  props: {},
+  methods: {
+    setLanguage: function (payload) {
+      this.$store.commit('setLanguage', payload)
+    }
+  },
+  computed: {
+    isEnglish () {
+      return this.$store.state.isEnglish
+    }
   }
 }
 </script>
@@ -131,6 +142,15 @@ export default {
       display: flex;
       justify-content: space-between;
       padding: 0 5px;
+    }
+    &__languageBtn{
+      color: #a6a6a6;
+      &_active{
+        color:#000000;
+      }
+    }
+    &____separator{
+      color: #a6a6a6;
     }
     &__nav{
       text-align: left;
