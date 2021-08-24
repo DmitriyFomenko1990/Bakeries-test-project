@@ -16,9 +16,10 @@ export default {
   .header {
     &__wrapper{
       max-width: 1920px;
+      width: 100%;
       border-bottom: solid 1px;
-      margin: 0 100px;
-      padding: 10px 0 5px;
+      margin: 0 auto;
+      padding: 10px 100px 5px;
     }
     &__title{
       margin: 0;
