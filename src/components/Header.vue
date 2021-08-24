@@ -17,14 +17,15 @@ export default {
     &__wrapper{
       max-width: 1920px;
       width: 100%;
-      border-bottom: solid 1px;
-      margin: 0 auto;
-      padding: 10px 100px 5px;
+      margin: 10px auto;
+      padding: 0 100px;
     }
     &__title{
       margin: 0;
       text-align: left;
       font-size: 20px;
+      border-bottom: solid 1px;
+      padding-bottom: 5px;
     }
   }
 </style>
