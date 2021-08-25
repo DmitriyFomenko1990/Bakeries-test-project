@@ -26,14 +26,14 @@ export default {
   &__wrapper{
     margin: 30px 0;
     max-width: 100%;
-    padding: 0 50px;
-    overflow: hidden;
      }
   &__title{
     text-align: left;
-    font-size: 20px;
-    border-bottom: solid 1px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: solid 1px #000000;
     padding-bottom: 5px;
+    margin-bottom: 20px;
   }
 }
 </style>

@@ -33,7 +33,7 @@ export default {
       max-width: 1920px;
       width: 100%;
       margin: 0 auto;
-      padding: 0 100px;
+      padding: 0 150px;
     }
   }
 </style>

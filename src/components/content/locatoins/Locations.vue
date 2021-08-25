@@ -31,7 +31,7 @@ export default {
   &__title{
     text-align: left;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 18px;
     padding-bottom: 5px;
     border-bottom: 1px solid #000000;
   }
@@ -40,7 +40,7 @@ export default {
   }
   &__list{
     margin-top: 20px;
-    margin-right: 150px;
+    margin-right: 110px;
     text-align: left;
     width: 100px;
     &:last-child{
@@ -48,8 +48,9 @@ export default {
     }
   }
   &__location{
+    font-size: 12px;
     font-weight: 600;
-    line-height: 23px;
+    line-height: 15px;
     margin-bottom: 10px;
     &:last-child{
       margin-bottom: 0;

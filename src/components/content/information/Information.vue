@@ -25,12 +25,12 @@ export default {
 <style scoped lang="scss">
 .info {
   &__wrapper{
-    margin: 70px auto;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
      }
   &__block{
-    width: 220px;
+    width: 210px;
   }
   &__img{
     width: 100px;

@@ -75,7 +75,7 @@ export default {
     &__wrapper{
       flex-shrink: 0;
       background-color: #f3f3f3;
-      padding: 20px 100px;
+      padding: 20px 200px;
     }
     &__content{
       display: flex;
@@ -120,7 +120,7 @@ export default {
     }
     &__settings-title{
       margin-bottom: 8px;
-      font-size: 12px;
+      font-size: 10px;
     }
     &__countries{
       display: flex;
@@ -156,14 +156,14 @@ export default {
       text-align: left;
     }
     &__nav-title{
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600;
       margin-bottom: 12px;
     }
     &__list-item{
       margin-bottom: 10px;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 10px;
       color: #a6a6a6;
       &:last-child{
         margin-bottom: 0;
