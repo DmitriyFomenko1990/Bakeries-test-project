@@ -17,8 +17,6 @@ export default {
     Information,
     Bakeries
   },
-  props: {
-  },
   created () {
     this.$store.dispatch('fetchBakeries')
     this.$store.dispatch('fetchLocations')

@@ -23,30 +23,19 @@
       <div class="footer__nav">
         <h3 class="footer__nav-title">Customer service</h3>
         <ul class="footer__list">
-          <li class="footer__list-item">FAQ</li>
-          <li class="footer__list-item">Terms of use</li>
-          <li class="footer__list-item">Privacy policy</li>
-          <li class="footer__list-item">Contact us</li>
+          <li class="footer__list-item" v-for="(service, index) in $data.customerService" :key="index">{{ service }}</li>
         </ul>
       </div>
       <div class="footer__nav">
         <h3 class="footer__nav-title">Information</h3>
         <ul class="footer__list">
-          <li class="footer__list-item">How it works</li>
-          <li class="footer__list-item">About Cake it easy</li>
-          <li class="footer__list-item">For companies</li>
-          <li class="footer__list-item">Send cakes to multiple locations</li>
-          <li class="footer__list-item">Cake calendar</li>
+          <li class="footer__list-item" v-for="(info, index) in $data.informations" :key="index">{{ info }}</li>
         </ul>
       </div>
       <div class="footer__nav">
         <h3 class="footer__nav-title">Inspiration</h3>
         <ul class="footer__list">
-          <li class="footer__list-item">Birthday cake</li>
-          <li class="footer__list-item">Cake with image or logo</li>
-          <li class="footer__list-item">Confirmation cake</li>
-          <li class="footer__list-item">Baptism cake</li>
-          <li class="footer__list-item">Glutenfree cake</li>
+          <li class="footer__list-item" v-for="(inspiration, index) in $data.inspirations" :key="index">{{ inspiration }}</li>
         </ul>
       </div>
     </div>
@@ -56,7 +45,13 @@
 <script>
 export default {
   name: 'Footer',
-  props: {},
+  data: () => {
+    return {
+      customerService: ['FAQ', 'Terms of use', 'Privacy policy', 'Contact us'],
+      informations: ['How it works', 'About Cake it easy', 'For companies', 'Send cakes to multiple locations', 'Cake calendar'],
+      inspirations: ['Birthday cake', 'Cake with image or logo', 'Confirmation cake', 'Baptism cake', 'Glutenfree cake']
+    }
+  },
   methods: {
     setLanguage: function (payload) {
       this.$store.commit('setLanguage', payload)

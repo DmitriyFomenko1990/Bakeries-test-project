@@ -13,7 +13,6 @@
 
 export default {
   name: 'Locations',
-  methods: {},
   computed: {
     locationsArrays () {
       return this.$store.getters.getLocationsNames
