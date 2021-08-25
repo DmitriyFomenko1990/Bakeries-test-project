@@ -24,7 +24,7 @@ export default {
 .carousel {
   &__wrapper{
     width: 95%;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
   &__logo{
     width: 150px;

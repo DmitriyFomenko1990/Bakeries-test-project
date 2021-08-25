@@ -1,16 +1,19 @@
 <template>
       <div class="bakeries__wrapper">
         <h1 class="bakeries__title">The best bakeries</h1>
-        <BakeriesCarousel v-bind:sources="sources"/>
+        <BakeriesCarousel v-if="sources.length > 4" v-bind:sources="sources"/>
+        <BakeriesLogos v-else v-bind:sources="sources" />
       </div>
 </template>
 
 <script>
 import BakeriesCarousel from './BakeriesCarousel'
+import BakeriesLogos from './BakeriesLogos'
 
 export default {
   name: 'Bakeries',
   components: {
+    BakeriesLogos,
     BakeriesCarousel
   },
   computed: {
@@ -33,7 +36,6 @@ export default {
     font-weight: 600;
     border-bottom: solid 1px #000000;
     padding-bottom: 5px;
-    margin-bottom: 20px;
   }
 }
 </style>
