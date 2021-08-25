@@ -19,7 +19,12 @@ export default {
     this.$store.dispatch('fetchBakeries');
     this.$store.dispatch('fetchLocations');
     this.$store.dispatch('fetchSchedule');
-  }
+  },
+    computed: {
+      schedules () {
+        return this.$store.getters.getAllSchedules
+      },
+    }
 }
 </script>
 

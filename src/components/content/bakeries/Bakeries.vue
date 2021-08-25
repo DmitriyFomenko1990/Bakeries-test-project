@@ -17,9 +17,6 @@ export default {
     BakeriesCarousel
   },
   computed: {
-    schedules () {
-      return this.$store.getters.getAllSchedules
-    },
     sources () {
       return this.$store.getters.getSources
     },
