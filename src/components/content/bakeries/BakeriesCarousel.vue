@@ -1,5 +1,6 @@
 <template>
-  <carousel class="carousel__wrapper" :per-page="4"  :mouse-drag="false" :navigationEnabled="true" :paginationEnabled="false" :touchDrag="true">
+  <carousel class="carousel__wrapper" :per-page="4"  :mouse-drag="false" :navigationEnabled="true"
+            :paginationEnabled="false" :touchDrag="true" navigationNextLabel=">" navigationPrevLabel="<">
     <slide v-for="(source, index) in sources" :key="index">
       <img class="carousel__logo" v-bind:src="source"  alt="logo"/>
     </slide>

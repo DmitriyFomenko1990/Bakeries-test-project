@@ -17,12 +17,12 @@ export default {
     BakeriesCarousel
   },
   computed: {
+    schedules () {
+      return this.$store.getters.getAllSchedules
+    },
     sources () {
       return this.$store.getters.getSources
     },
-    schedule () {
-      return this.$store.state.schedule
-    }
   }
 }
 </script>
