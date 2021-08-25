@@ -16,7 +16,6 @@ export default {
   methods: {},
   computed: {
     locationsArrays () {
-      console.log(this.$store.getters.getLocationsNames)
       return this.$store.getters.getLocationsNames
     }
   }
