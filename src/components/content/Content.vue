@@ -28,6 +28,9 @@ export default {
       width: 100%;
       margin: 0 auto;
       padding: 0 150px;
+      @media screen and (max-width: 768px){
+        padding: 0 50px;
+      }
     }
   }
 </style>

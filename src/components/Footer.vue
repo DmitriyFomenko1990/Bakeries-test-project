@@ -71,16 +71,29 @@ export default {
       flex-shrink: 0;
       background-color: #f3f3f3;
       padding: 20px 200px;
+      @media screen and (max-width: 768px){
+        padding: 20px 70px;
+      }
+      @media screen and (max-width: 426px){
+        padding: 0;
+      }
+
     }
     &__content{
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 426px){
+        flex-direction: column;
+      }
     }
     &__settings{
       width: 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @media screen and (max-width: 426px){
+        margin: 20px auto;
+      }
     }
     &__social{
       display: flex;
@@ -136,10 +149,12 @@ export default {
     &__languages{
       display: flex;
       justify-content: space-between;
-      padding: 0 5px;
+      align-items: center;
     }
     &__languageBtn{
       color: #a6a6a6;
+      padding: 8px;
+      background: none;
       &_active{
         color:#000000;
       }
@@ -149,14 +164,19 @@ export default {
     }
     &__nav{
       text-align: left;
+      @media screen and (max-width: 426px){
+        margin: 20px auto;
+        width: 200px;
+        padding-left: 50px;
+      }
     }
     &__nav-title{
       font-size: 12px;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 5px;
     }
     &__list-item{
-      margin-bottom: 10px;
+      padding: 7px 0;
       font-weight: 400;
       font-size: 10px;
       color: #a6a6a6;

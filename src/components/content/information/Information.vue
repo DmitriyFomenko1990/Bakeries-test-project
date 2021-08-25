@@ -28,9 +28,16 @@ export default {
     margin: 50px auto;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 426px){
+      margin: 0;
+      flex-direction: column;
+    }
      }
   &__block{
     width: 210px;
+    @media screen and (max-width: 426px){
+      margin: 20px auto;
+    }
   }
   &__img{
     width: 100px;
