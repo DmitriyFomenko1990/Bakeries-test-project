@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import BakeriesCarousel from './BakeriesCarousel'
-import BakeriesLogos from './BakeriesLogos'
+import BakeriesCarousel from './BakeriesCarousel';
+import BakeriesLogos from './BakeriesLogos';
 
 export default {
   name: 'Bakeries',

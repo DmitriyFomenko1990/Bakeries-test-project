@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     setLanguage: function (payload) {
-      this.$store.commit('setLanguage', payload)
+      this.$store.commit('setLanguage', payload);
     }
   },
   computed: {

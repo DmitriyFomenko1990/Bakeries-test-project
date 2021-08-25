@@ -36,6 +36,7 @@ export default {
   }
   &__list-wrapper{
     display: flex;
+    flex-wrap: wrap;
   }
   &__list{
     margin-top: 20px;

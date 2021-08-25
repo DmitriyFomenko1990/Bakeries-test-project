@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Bakeries from './bakeries/Bakeries'
-import Information from './information/Information'
-import Locations from './locatoins/Locations'
+import Bakeries from './bakeries/Bakeries';
+import Information from './information/Information';
+import Locations from './locatoins/Locations';
 export default {
   name: 'Content',
   components: {
@@ -18,8 +18,8 @@ export default {
     Bakeries
   },
   created () {
-    this.$store.dispatch('fetchBakeries')
-    this.$store.dispatch('fetchLocations')
+    this.$store.dispatch('fetchBakeries');
+    this.$store.dispatch('fetchLocations');
   }
 }
 </script>
