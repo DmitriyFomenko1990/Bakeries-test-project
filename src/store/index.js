@@ -1,19 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { fetchBakeries, fetchLocations } from '../api/api';
+import { fetchBakeries, fetchLocations, fetchSchedule } from '../api/api';
+import { createSchedule } from '../schedule-transform/schedule-transform';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isError: '',
+    isError: [],
     isEnglish: true,
     bakeries: [],
-    locations: []
+    locations: [],
+    schedule: []
   },
   mutations: {
     setError (state, error) {
-      state.isError = error;
+      state.isError.push(error);
     },
     setLanguage (state, payload) {
       state.isEnglish = payload;
@@ -23,7 +25,10 @@ export default new Vuex.Store({
     },
     setLocations (state, locations) {
       state.locations = locations;
-    }
+    },
+    setSchedule (state, schedule) {
+      state.schedule = schedule;
+    },
   },
   actions: {
     fetchBakeries (context) {
@@ -43,7 +48,16 @@ export default new Vuex.Store({
         .catch(error => {
           context.commit('setError', error);
         })
-    }
+    },
+    fetchSchedule (context) {
+      return fetchSchedule()
+        .then(response => {
+          context.commit('setSchedule', response);
+        })
+        .catch(error => {
+          context.commit('setError', error);
+        })
+    },
   },
   getters: {
     getSources: state => {
@@ -74,6 +88,9 @@ export default new Vuex.Store({
         }
       }
       return locationsArrays
-    }
+    },
+    getSchedule: state => {
+      return createSchedule(state.schedule)
+    },
   }
 });

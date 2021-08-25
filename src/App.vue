@@ -6,14 +6,19 @@
 </template>
 
 <script>
-import Footer from './components/Footer'
-import Content from './components/content/Content'
+import Footer from './components/Footer';
+import Content from './components/content/Content';
 
 export default {
   name: 'App',
   components: {
     Content,
     Footer
+  },
+  created () {
+    this.$store.dispatch('fetchBakeries');
+    this.$store.dispatch('fetchLocations');
+    this.$store.dispatch('fetchSchedule');
   }
 }
 </script>

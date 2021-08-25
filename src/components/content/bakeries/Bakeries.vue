@@ -19,6 +19,9 @@ export default {
   computed: {
     sources () {
       return this.$store.getters.getSources
+    },
+    schedule () {
+      return this.$store.state.schedule
     }
   }
 }
@@ -29,6 +32,7 @@ export default {
   &__wrapper{
     margin: 30px 0;
     max-width: 100%;
+    height: 115px;
      }
   &__title{
     text-align: left;

@@ -16,10 +16,6 @@ export default {
     Locations,
     Information,
     Bakeries
-  },
-  created () {
-    this.$store.dispatch('fetchBakeries');
-    this.$store.dispatch('fetchLocations');
   }
 }
 </script>
